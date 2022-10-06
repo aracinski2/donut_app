@@ -20,10 +20,10 @@ class Api::DonutsController < ApplicationController
   end
 
   def update
-    @donut = Donut.find_by(id: 1)
-    @donut.name = "original glazed"
-    @donut.coating = "sugar frosting"
-    @donut.shape = "donut"
+    @donut = Donut.find_by(id: params[:id])
+    @donut.name = params[:name]
+    @donut.coating = params[:coating]
+    @donut.shape = params[:shape]
 
     @donut.save!
     render 'show.json.jb'
