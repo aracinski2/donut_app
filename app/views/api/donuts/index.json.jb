@@ -1,0 +1,8 @@
+@donuts.map do |donut|
+  {
+  id: donut.id,
+  name: donut.name,
+  coating: donut.coating,
+  shape: donut.shape,
+  }
+end
