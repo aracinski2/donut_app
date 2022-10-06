@@ -30,8 +30,8 @@ class Api::DonutsController < ApplicationController
   end
 
   def delete
-    @donut = Donut.find_by(id: 1 )
+    @donut = Donut.find_by(id: params[:id])
     @donut.delete
-    render json: "Donut Deleted"
+    render json: {message: "Donut Deleted"}
   end
 end
