@@ -28,4 +28,10 @@ class Api::DonutsController < ApplicationController
     @donut.save!
     render 'show.json.jb'
   end
+
+  def delete
+    @donut = Donut.find_by(id: 1 )
+    @donut.delete
+    render json: "Donut Deleted"
+  end
 end
