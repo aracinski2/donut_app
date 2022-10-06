@@ -11,9 +11,9 @@ class Api::DonutsController < ApplicationController
   
   def create
     @donut = Donut.new(
-      name: "jelly filled",
-      coating: "sugar",
-      shape: "puck"
+      name: params[:name],
+      coating: params[:coating],
+      shape: params[:shape]
     )
     @donut.save!
     render 'show.json.jb'
