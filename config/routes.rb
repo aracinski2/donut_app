@@ -12,5 +12,6 @@ Rails.application.routes.draw do
     get "/donuts/:id" => "donuts#show" 
 
     post "/donuts" => "donuts#create"
+    patch "/donuts/:id" => "donuts#update"
   end
 end
